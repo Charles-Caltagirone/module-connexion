@@ -21,7 +21,7 @@ if (isset($_POST["submit"])) {
     // echo ($result2[0]['password']);
     if ($result[0]['password'] == $password) {
       // $_SESSION['login'] = $result[0]['login'];
-      var_dump($_SESSION);
+      // var_dump($_SESSION);
       header("Location: index.php");
       // exit();
     } else {
@@ -41,8 +41,8 @@ if (isset($_POST["submit"])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
-  <title>Login</title>
+  <link rel="stylesheet" href="style2.css" media="screen" type="text/css" />
+  <title>Connexion</title>
 
 </head>
 
@@ -53,20 +53,22 @@ if (isset($_POST["submit"])) {
     </nav>
   </header>
 
-  <div id="container">
+  <div class="container">
     <!-- afficher dans un else -->
-    <h2>Se connecter</h2>
     <form class="" action="" method="post">
+      <h2>Se connecter</h2>
+      <br>
+
       <label for="login">Login : </label>
       <input type="text" name="login" required value="" autofocus> <br>
       <label for="password">Password : </label>
       <input type="password" name="password" required value="" autofocus> <br>
       <button type="submit" name="submit">Se connecter</button>
+      <button type="submit" name="submit"><a href="registration.php">Inscription</a></button>
     </form>
   </div>
   <br>
 
-  <a href="registration.php">Inscription</a>
 
 </body>
 

@@ -34,7 +34,7 @@
   <head>
     <meta charset="utf-8">
     <title>S'enregistrer</title>
-    <!-- <link rel="stylesheet" href="./style.css" type="text/css" /> -->
+    <link rel="stylesheet" href="./style2.css" type="text/css" />
   </head>
 
   <body>
@@ -47,6 +47,8 @@
     <div class="container">
       <form class="" action="" method="post" autocomplete="off">
         <h2>Inscription</h2>
+        <br>
+
         <label for="login">Login : </label>
         <input type="text" name="login" id="login" required value="" autofocus> <br>
         <label for="name">Prénom : </label>
@@ -58,11 +60,11 @@
         <label for="confirmpassword">Confirm Password : </label>
         <input type="password" name="confirmpassword" id="confirmpassword" required value=""> <br>
         <button type="submit" name="submit">Valider</button>
+        <button type="submit" name="submit"><a href="login.php">Déjà inscrit ? Connecte toi ici !</a></button>
       </form>
     </div>
     <br>
 
-    <a href="login.php">Déjà inscrit ? Connecte toi ici !</a>
   </body>
 
   </html>

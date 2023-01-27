@@ -23,8 +23,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link rel="stylesheet" href="./style.css" type="text/css" /> -->
-        <title>Document</title>
+        <link rel="stylesheet" href="./style2.css" type="text/css" />
+        <title>Page Admin</title>
     </head>
 
     <body>
@@ -33,45 +33,37 @@
                 <?php require 'header_menu.php'; ?>
             </nav>
         </header>
+        <div class="container">
 
-        <table>
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>Login</th>
-                    <th>Nom</th>
-                    <th>Prénom</th>
-                    <th>Mot de passe</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                foreach ($utilisateurs as $utilisateur) {
-                ?>
+            <table>
+                <h2>Informations des users</h2>
+
+                <thead>
                     <tr>
-                        <?php echo "<td>" . $utilisateur['id'] . "</td>" ?>
-                        <?php echo "<td>" . $utilisateur['login'] . "</td>" ?>
-                        <?php echo "<td>" . $utilisateur['nom'] . "</td>" ?>
-                        <?php echo "<td>" . $utilisateur['prenom'] . "</td>" ?>
-                        <?php echo "<td>" . $utilisateur['password'] . "</td>" ?>
-                    <?php
-                }
-                    ?>
+                        <th>id</th>
+                        <th>Login</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Mot de passe</th>
                     </tr>
-            </tbody>
-        </table>
-        <style>
-            table {
-                margin-top: 2em;
-                border-collapse: collapse;
-                text-align: center;
-            }
-
-            th,
-            td {
-                border: 1px solid;
-            }
-        </style>
+                </thead>
+                <tbody>
+                    <?php
+                    foreach ($utilisateurs as $utilisateur) {
+                    ?>
+                        <tr>
+                            <?php echo "<td>" . $utilisateur['id'] . "</td>" ?>
+                            <?php echo "<td>" . $utilisateur['login'] . "</td>" ?>
+                            <?php echo "<td>" . $utilisateur['nom'] . "</td>" ?>
+                            <?php echo "<td>" . $utilisateur['prenom'] . "</td>" ?>
+                            <?php echo "<td>" . $utilisateur['password'] . "</td>" ?>
+                        <?php
+                    }
+                        ?>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
     </body>
 
     </html>
