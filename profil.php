@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
 
         $query = "UPDATE utilisateurs SET login ='" . $login . "', prenom ='" . $prenom . "', nom ='" . $nom . "', password ='" . $password . "' WHERE id='" . $id . "'";
         mysqli_query($conn, $query);
-        
+
 
         echo "Votre profil a été mise à jour avec succès";
         echo "<br>";
@@ -58,7 +58,7 @@ if (isset($_POST['submit'])) {
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Roboto+Flex:opsz,wght@8..144,600&display=swap" rel="stylesheet"> -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil</title>
 </head>
@@ -74,9 +74,8 @@ if (isset($_POST['submit'])) {
 
         <form action="" method="POST" autocomplete="on">
             <h2>Modifier son profil</h2>
+            <br>
 
-            <br>
-            <br>
             <label for="login">LOGIN</label><br>
 
             <input type="text" name="login" value="<?= $_SESSION['user'][0]['login'] ?>"><br>
@@ -110,10 +109,7 @@ if (isset($_POST['submit'])) {
             <?= @$error_pw ?>
             <br>
             <br>
-
-
-            <input type="submit" name="submit" value="Sauvegarder" class="btn btn-primary">
-
+            <button type="submit" name="submit">Sauvegarder</button>
 
         </form>
     </div>
