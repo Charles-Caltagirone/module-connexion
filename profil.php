@@ -12,10 +12,15 @@ if (isset($_POST['submit'])) {
     // $nom = $_POST['nom'];
     // $login = $_SESSION['login'];
     $id = $_SESSION['user'][0]['id'];
-    $login = $_SESSION['user'][0]['login'];
-    $prenom = $_SESSION['user'][0]['prenom'];
-    $nom = $_SESSION['user'][0]['nom'];
-    $password = $_SESSION['user'][0]['password'];
+    $login = $_POST['login'];
+    $prenom = $_POST['prenom'];
+    $nom = $_POST['nom'];
+    $password = $_POST['password'];
+    // $id = $_SESSION['user'][0]['id'];
+    // $login = $_SESSION['user'][0]['login'];
+    // $prenom = $_SESSION['user'][0]['prenom'];
+    // $nom = $_SESSION['user'][0]['nom'];
+    // $password = $_SESSION['user'][0]['password'];
 
 
 
