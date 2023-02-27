@@ -47,7 +47,12 @@
                     </tr>
                 </thead>
                 <tbody>
+                    
                     <?php
+                        $sqlQuery = 'SELECT * FROM utilisateurs';
+                        $utilisateursStatement = $conn->query($sqlQuery);
+                        $utilisateurs = $utilisateursStatement->fetch_all(MYSQLI_ASSOC);
+                    
                     foreach ($utilisateurs as $utilisateur) {
                     ?>
                         <tr>
